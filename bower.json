@@ -1,0 +1,28 @@
+{
+  "name": "media-object",
+  "version": "0.1.0",
+  "authors": [
+    "Kus Cámara"
+  ],
+  "description": "An element providing a solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "media-object.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/kcmr/media-object/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5"
+  }
+}

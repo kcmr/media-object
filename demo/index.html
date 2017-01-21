@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>media-object Demo</title>
+    <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../media-object.html">
+    <style>
+      body {
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      media-object p {
+        margin: 0;
+      }
+
+      .wrapper {
+        max-width: 680px;
+        margin: auto;
+      }
+
+      demo-snippet {
+        margin-bottom: 60px;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <div class="wrapper">
+      <demo-snippet>
+        <template>
+          <media-object>
+            <img media src="http://fakeimg.pl/60x60/00CED1/FFF/?text=IMG" alt="">
+            <div body>
+              <h2>Media heading</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dignissimos quibusdam laborum reprehenderit blanditiis placeat aliquid doloribus nulla velit, culpa sed voluptatem possimus consectetur excepturi, officiis incidunt aperiam officia explicabo!</p>
+            </div>
+          </media-object>
+        </template>
+      </demo-snippet>
+      
+      <demo-snippet>
+        <template>
+          <media-object reverse>
+            <img media src="http://fakeimg.pl/60x60/D1007F/FFF/?text=IMG" alt="">
+            <div body>
+              <h2>Media heading</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, recusandae ad explicabo dicta excepturi delectus, dolorem provident. Qui officia dolores, voluptatibus, facere doloremque, cum molestias quas ex repudiandae atque aliquid?</p>
+            </div>
+          </media-object>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <media-object>
+            <img media center circle src="http://fakeimg.pl/60x60/3ce641/FFF/?text=IMG" alt="">
+            <div body>
+              <h2>Name Lastname</h2>
+              <div>user@domain.com</div>
+              <div>+34 666 666 666</div>
+            </div>
+          </media-object>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <media-object vertical text-center>
+            <img media circle center src="http://fakeimg.pl/60x60/FEAB09/FFF/?text=IMG" alt="">
+            <div body>
+              <h2>Media heading</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro enim vel in doloribus molestiae quaerat ducimus deserunt alias repellat iste facilis, sapiente, cumque maiores, aliquid velit vero quam corporis sint?</p>
+            </div>
+          </media-object>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <media-object vertical reverse>
+            <img media src="http://fakeimg.pl/300x160/ee5800/FFF/?text=IMG" alt="">
+            <div body>
+              <h2>Media heading</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro enim vel in doloribus molestiae quaerat ducimus deserunt alias repellat iste facilis, sapiente, cumque maiores, aliquid velit vero quam corporis sint?</p>
+            </div>
+          </media-object>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

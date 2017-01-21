@@ -1,0 +1,149 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+An element providing a solution to no problem in particular.
+
+Example:
+
+    <media-object></media-object>
+
+Example:
+
+    <media-object>
+      <h2>Hello media-object</h2>
+    </media-object>
+
+@demo demo/index.html
+@hero hero.svg
+-->
+
+<dom-module id="media-object">
+  <template strip-whitespace>
+    <style>
+      :host {
+        display: -ms-flexbox;
+        display: flex;
+        box-sizing: border-box;
+        -ms-flex-align: start;
+        align-items: flex-start;
+
+        --media-object-spacing: 1em;
+      }
+
+      /**
+       * Horizonal (default)
+       * [media] [body-----]
+       *         [-----    ]
+       */
+      ::slotted([media]) {
+        margin-right: var(--media-object-spacing);
+      }
+      ::slotted([body]) {
+        -ms-flex: 1;
+        flex: 1;
+      }
+
+      /**
+       * Horizontal reversed
+       * [body-----] [media]
+       * [-----    ]    
+       */
+      :host([reverse]) {
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+      }
+
+      :host([reverse]) ::slotted([media]) {
+        margin-right: 0;
+        margin-left: var(--media-object-spacing);
+      }
+
+      /**
+       * Vertical
+       * [media]
+       * 
+       * [body-----]
+       * [-----    ]
+       */
+      :host([vertical]) {
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+
+      :host([vertical]) ::slotted([media]) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      :host([vertical]) ::slotted([media]) {
+        margin-bottom: var(--media-object-spacing);
+      }
+
+      /**
+       * Vertical reversed
+       * [body-----]
+       * [-----    ]
+       *
+       * [media]
+       */
+      :host([vertical][reverse]) {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+      }
+
+      :host([vertical][reverse]) ::slotted([media]) {
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-top: var(--media-object-spacing);
+      }
+
+      /**
+       * Media alignment.
+       *
+       * `<img media center>`
+       * 
+       * Horizontal.
+       *         [body-----]
+       * [media] [-----    ]
+       *         [--       ]
+       *
+       * Vertical.
+       *   [media]  
+       * [body-----]
+       * [-----    ]
+       * 
+       */
+      ::slotted([media][center]) {
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+      }
+
+      /**
+       * Rounded media.
+       */
+      ::slotted([media][circle]) {
+        border-radius: 50%;
+      }
+
+      /**
+       * Text alignment
+       */
+      :host([text-center]) {
+        text-align: center;
+      }
+    </style>
+
+    <slot></slot>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'media-object'
+      });
+    }());
+  </script>
+</dom-module>
