@@ -6,20 +6,27 @@
     <title>media-object Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../../paper-styles/typography.html">
+    <link rel="import" href="../../paper-avatar/paper-avatar.html">
     <link rel="import" href="../media-object.html">
     <style>
       body {
         font-family: Roboto, sans-serif;
-        font-size: 14px;
+        font-size: 0.88rem;
       }
+
       h2 {
-        font-size: 18px;
-        font-weight: 500;
-        margin-top: 0;
-        margin-bottom: 10px;
-      }
-      media-object p {
+        font-size: 1rem;
+        font-weight: 400;
         margin: 0;
+      }
+
+      media-object p { margin: 0; }
+      media-object [body] { line-height: 1.5; }
+      media-object [body] p,
+      media-object [body] div {
+        font-size: 0.81rem;
+        color: #828282;
       }
 
       .wrapper {
@@ -27,8 +34,27 @@
         margin: auto;
       }
 
-      demo-snippet {
-        margin-bottom: 60px;
+      .wrapper demo-snippet { 
+        margin-bottom: 60px; 
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -2px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .avatar {
+        width: 80px;
+        height: 80px;
+      }
+
+      .rounded {
+        border-radius: 5px;
+      }
+
+      code,
+      demo-snippet::shadow code {
+        font-family: Monaco, 'Roboto Mono', monospace, monospace;
+        font-size: 0.75rem;
+        line-height: 1.5;
       }
     </style>
   </head>
@@ -37,10 +63,10 @@
       <demo-snippet>
         <template>
           <media-object>
-            <img media src="http://fakeimg.pl/60x60/00CED1/FFF/?text=IMG" alt="">
+            <img media src="http://fakeimg.pl/60x60/00CED1/FFF/?text=IMG" alt="" class="rounded">
             <div body>
               <h2>Media heading</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dignissimos quibusdam laborum reprehenderit blanditiis placeat aliquid doloribus nulla velit, culpa sed voluptatem possimus consectetur excepturi, officiis incidunt aperiam officia explicabo!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dignissimos quibusdam laborum reprehenderit blanditiis placeat aliquid!</p>
             </div>
           </media-object>
         </template>
@@ -49,7 +75,7 @@
       <demo-snippet>
         <template>
           <media-object reverse>
-            <img media src="http://fakeimg.pl/60x60/D1007F/FFF/?text=IMG" alt="">
+            <img media src="http://fakeimg.pl/60x60/D1007F/FFF/?text=IMG" alt="" class="rounded">
             <div body>
               <h2>Media heading</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, recusandae ad explicabo dicta excepturi delectus, dolorem provident. Qui officia dolores, voluptatibus, facere doloremque, cum molestias quas ex repudiandae atque aliquid?</p>
@@ -86,7 +112,11 @@
       <demo-snippet>
         <template>
           <media-object vertical center text-center>
-            <img media circle src="http://fakeimg.pl/80x80/FEAB09/FFF/?text=IMG" alt="">
+            <paper-avatar media
+              class="avatar"
+              src="https://avatars3.githubusercontent.com/u/92611?v=3&amp;s=80"
+              placeholder="Name Lastname">
+            </paper-avatar>
             <div body>
               <h2>John Doe</h2>
               <div>john.doe@domain.com</div>
