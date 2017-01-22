@@ -98,32 +98,11 @@ Example:
       }
 
       /**
-       * Media alignment.
-       *
-       * `<img media center>`
-       * 
-       * Horizontal.
-       *         [body-----]
-       * [media] [-----    ]
-       *         [--       ]
-       *
-       * Vertical.
-       *   [media]  
-       * [body-----]
-       * [-----    ]
-       * 
+       * Alignment
        */
-      ::slotted([media][center]) {
-        -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-      }
-
-      /**
-       * Rounded media.
-       */
-      ::slotted([media][circle]) {
-        border-radius: 50%;
+      :host([center]) {
+        -ms-flex-align: center;
+        align-items: center;
       }
 
       /**
@@ -131,6 +110,13 @@ Example:
        */
       :host([text-center]) {
         text-align: center;
+      }
+
+      /**
+       * Rounded media.
+       */
+      ::slotted([media][circle]) {
+        border-radius: 50%;
       }
     </style>
 
