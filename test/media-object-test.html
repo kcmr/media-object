@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <link rel="import" href="../media-object.html">
+  </head>
+  <body>
+
+    <test-fixture id="horizontal">
+      <template>
+        <media-object>
+          <img media src="" alt="">
+          <div body>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </media-object>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="horizontal-reversed">
+      <template>
+        <media-object reverse>
+          <img media src="" alt="">
+          <div body>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </media-object>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="vertical">
+      <template>
+        <media-object vertical>
+          <img media src="" alt="">
+          <div body>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </media-object>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="vertical-reversed">
+      <template>
+        <media-object vertical reverse>
+          <img media src="" alt="">
+          <div body>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </media-object>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="center">
+      <template>
+        <media-object center>
+          <img media src="" alt="">
+          <div body>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </media-object>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="text-center">
+      <template>
+        <media-object text-center>
+          <img media src="" alt="">
+          <div body>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </media-object>
+      </template>
+    </test-fixture>
+
+    
+    <script>
+      suite('<media-object>', function() {
+        setup(function() {
+          this.el = fixture('horizontal');
+        });
+
+        test('flex-direction is row', function() {
+          assert.equal(window.getComputedStyle(this.el).flexDirection, 'row');
+        });
+        test('align-items is flex-start', function() {
+          assert.equal(window.getComputedStyle(this.el).alignItems, 'flex-start');
+        });
+      });
+
+      suite('<media-object reverse>', function() {
+        setup(function() {
+          this.el = fixture('horizontal-reversed');
+        });
+
+        test('flex-direction is row-reverse', function() {
+          assert.equal(window.getComputedStyle(this.el).flexDirection, 'row-reverse');
+        });
+      });
+
+      suite('<media-object vertical>', function() {
+        setup(function() {
+          this.el = fixture('vertical');
+        });
+
+        test('flex-direction is column', function() {
+          assert.equal(window.getComputedStyle(this.el).flexDirection, 'column');
+        });
+      });
+
+      suite('<media-object vertical reverse>', function() {
+        setup(function() {
+          this.el = fixture('vertical-reversed');
+        });
+
+        test('flex-direction is column-reverse', function() {
+          assert.equal(window.getComputedStyle(this.el).flexDirection, 'column-reverse');
+        });
+      });
+
+      suite('<media-object center>', function() {
+        setup(function() {
+          this.el = fixture('center');
+        });
+
+        test('align-items is center', function() {
+          assert.equal(window.getComputedStyle(this.el).alignItems, 'center');
+        });
+      });
+
+      suite('<media-object text-center>', function() {
+        setup(function() {
+          this.el = fixture('text-center');
+        });
+
+        test('text-align is center', function() {
+          assert.equal(window.getComputedStyle(this.el).textAlign, 'center');
+        });
+      });
+    </script>
+
+  </body>
+</html>
