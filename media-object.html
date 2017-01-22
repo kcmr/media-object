@@ -30,24 +30,15 @@ Example:
         --media-object-spacing: 1em;
       }
 
-      /**
-       * Horizonal (default)
-       * [media] [body-----]
-       *         [-----    ]
-       */
       ::slotted([media]) {
         margin-right: var(--media-object-spacing);
       }
+      
       ::slotted([body]) {
         -ms-flex: 1;
         flex: 1;
       }
 
-      /**
-       * Horizontal reversed
-       * [body-----] [media]
-       * [-----    ]    
-       */
       :host([reverse]) {
         -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
@@ -58,13 +49,6 @@ Example:
         margin-left: var(--media-object-spacing);
       }
 
-      /**
-       * Vertical
-       * [media]
-       * 
-       * [body-----]
-       * [-----    ]
-       */
       :host([vertical]) {
         -ms-flex-direction: column;
         flex-direction: column;
@@ -79,13 +63,6 @@ Example:
         margin-bottom: var(--media-object-spacing);
       }
 
-      /**
-       * Vertical reversed
-       * [body-----]
-       * [-----    ]
-       *
-       * [media]
-       */
       :host([vertical][reverse]) {
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
@@ -97,24 +74,15 @@ Example:
         margin-top: var(--media-object-spacing);
       }
 
-      /**
-       * Alignment
-       */
       :host([center]) {
         -ms-flex-align: center;
         align-items: center;
       }
 
-      /**
-       * Text alignment
-       */
       :host([text-center]) {
         text-align: center;
       }
 
-      /**
-       * Rounded media.
-       */
       ::slotted([media][circle]) {
         border-radius: 50%;
       }
@@ -124,12 +92,6 @@ Example:
   </template>
 
   <script>
-    (function() {
-      'use strict';
-
-      Polymer({
-        is: 'media-object'
-      });
-    }());
+    Polymer({ is: 'media-object' });
   </script>
 </dom-module>
