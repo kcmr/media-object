@@ -41,7 +41,12 @@
         overflow: hidden;
       }
 
-      .avatar {
+      .avatar-60 {
+        width: 60px;
+        height: 60px;
+      }
+
+      .avatar-80 {
         width: 80px;
         height: 80px;
       }
@@ -75,7 +80,7 @@
       <demo-snippet>
         <template>
           <media-object reverse>
-            <img media src="http://fakeimg.pl/60x60/D1007F/FFF/?text=IMG" alt="" class="rounded">
+            <img media src="http://fakeimg.pl/60x60/FEAB09/FFF/?text=IMG" alt="" class="rounded">
             <div body>
               <h2>Media heading</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, recusandae ad explicabo dicta excepturi delectus, dolorem provident. Qui officia dolores, voluptatibus, facere doloremque, cum molestias quas ex repudiandae atque aliquid?</p>
@@ -87,10 +92,10 @@
       <demo-snippet>
         <template>
           <media-object center>
-            <img media circle src="http://fakeimg.pl/60x60/3ce641/FFF/?text=IMG" alt="">
+            <paper-avatar media class="avatar-60" placeholder="Name Last"></paper-avatar>
             <div body>
-              <h2>John Doe</h2>
-              <div>john.doe@domain.com</div>
+              <h2>Name Last</h2>
+              <div>name.lastname@domain.com</div>
               <div>+34 666 666 666</div>
             </div>
           </media-object>
@@ -100,7 +105,19 @@
       <demo-snippet>
         <template>
           <media-object vertical>
-            <img media src="http://fakeimg.pl/100x100/ee5800/FFF/?text=IMG" alt="">
+            <img media src="http://fakeimg.pl/100x100/99CE00/FFF/?text=IMG" alt="">
+            <div body>
+              <h2>Media heading</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro enim vel in doloribus molestiae quaerat ducimus deserunt alias repellat iste facilis, sapiente, cumque maiores, aliquid velit vero quam corporis sint?</p>
+            </div>
+          </media-object>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <media-object vertical reverse>
+            <img media src="http://fakeimg.pl/100x100/FEAB09/FFF/?text=IMG" alt="">
             <div body>
               <h2>Media heading</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro enim vel in doloribus molestiae quaerat ducimus deserunt alias repellat iste facilis, sapiente, cumque maiores, aliquid velit vero quam corporis sint?</p>
@@ -112,14 +129,10 @@
       <demo-snippet>
         <template>
           <media-object vertical center text-center>
-            <paper-avatar media
-              class="avatar"
-              src="https://avatars3.githubusercontent.com/u/92611?v=3&amp;s=80"
-              placeholder="Name Lastname">
-            </paper-avatar>
+            <paper-avatar media class="avatar-80" placeholder="Juan Nadie"></paper-avatar>
             <div body>
-              <h2>John Doe</h2>
-              <div>john.doe@domain.com</div>
+              <h2>Juan Nadie</h2>
+              <div>juan.nadie@domain.com</div>
               <div>+34 666 666 666</div>
             </div>
           </media-object>
