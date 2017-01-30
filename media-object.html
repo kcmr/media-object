@@ -57,9 +57,6 @@ Example:
       :host([vertical]) ::slotted([media]) {
         margin-left: 0;
         margin-right: 0;
-      }
-
-      :host([vertical]) ::slotted([media]) {
         margin-bottom: var(--media-object-spacing);
       }
 
@@ -92,6 +89,9 @@ Example:
   </template>
 
   <script>
-    Polymer({ is: 'media-object' });
+    Polymer({ 
+      is: 'media-object',
+      extends: 'div'
+    });
   </script>
 </dom-module>

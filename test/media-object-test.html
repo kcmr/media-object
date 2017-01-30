@@ -11,73 +11,73 @@
 
     <test-fixture id="horizontal">
       <template>
-        <media-object>
+        <div is="media-object">
           <img media src="" alt="">
           <div body>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </media-object>
+        </div>
       </template>
     </test-fixture>
 
     <test-fixture id="horizontal-reversed">
       <template>
-        <media-object reverse>
+        <div is="media-object" reverse>
           <img media src="" alt="">
           <div body>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </media-object>
+        </div>
       </template>
     </test-fixture>
 
     <test-fixture id="vertical">
       <template>
-        <media-object vertical>
+        <div is="media-object" vertical>
           <img media src="" alt="">
           <div body>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </media-object>
+        </div>
       </template>
     </test-fixture>
 
     <test-fixture id="vertical-reversed">
       <template>
-        <media-object vertical reverse>
+        <div is="media-object" vertical reverse>
           <img media src="" alt="">
           <div body>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </media-object>
+        </div>
       </template>
     </test-fixture>
 
     <test-fixture id="center">
       <template>
-        <media-object center>
+        <div is="media-object" center>
           <img media src="" alt="">
           <div body>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </media-object>
+        </div>
       </template>
     </test-fixture>
 
     <test-fixture id="text-center">
       <template>
-        <media-object text-center>
+        <div is="media-object" text-center>
           <img media src="" alt="">
           <div body>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </media-object>
+        </div>
       </template>
     </test-fixture>
 
     
     <script>
-      suite('<media-object>', function() {
+      suite('<div is="media-object">', function() {
         setup(function() {
           this.el = fixture('horizontal');
         });
@@ -90,7 +90,7 @@
         });
       });
 
-      suite('<media-object reverse>', function() {
+      suite('<div is="media-object" reverse>', function() {
         setup(function() {
           this.el = fixture('horizontal-reversed');
         });
@@ -100,7 +100,7 @@
         });
       });
 
-      suite('<media-object vertical>', function() {
+      suite('<div is="media-object" vertical>', function() {
         setup(function() {
           this.el = fixture('vertical');
         });
@@ -110,7 +110,7 @@
         });
       });
 
-      suite('<media-object vertical reverse>', function() {
+      suite('<div is="media-object" vertical reverse>', function() {
         setup(function() {
           this.el = fixture('vertical-reversed');
         });
@@ -120,7 +120,7 @@
         });
       });
 
-      suite('<media-object center>', function() {
+      suite('<div is="media-object" center>', function() {
         setup(function() {
           this.el = fixture('center');
         });
@@ -130,7 +130,7 @@
         });
       });
 
-      suite('<media-object text-center>', function() {
+      suite('<div is="media-object" text-center>', function() {
         setup(function() {
           this.el = fixture('text-center');
         });

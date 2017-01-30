@@ -21,10 +21,10 @@
         margin: 0;
       }
 
-      media-object p { margin: 0; }
-      media-object [body] { line-height: 1.5; }
-      media-object [body] p,
-      media-object [body] div {
+      [is="media-object"] p { margin: 0; }
+      [is="media-object"] [body] { line-height: 1.5; }
+      [is="media-object"] [body] p,
+      [is="media-object"] [body] div {
         font-size: 0.81rem;
         color: #828282;
       }
@@ -67,75 +67,75 @@
     <div class="wrapper">
       <demo-snippet>
         <template>
-          <media-object>
+          <div is="media-object">
             <img media src="http://fakeimg.pl/60x60/00CED1/FFF/?text=IMG" alt="" class="rounded">
             <div body>
               <h2>Media heading</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dignissimos quibusdam laborum reprehenderit blanditiis placeat aliquid!</p>
             </div>
-          </media-object>
+          </div>
         </template>
       </demo-snippet>
       
       <demo-snippet>
         <template>
-          <media-object reverse>
+          <div is="media-object" reverse>
             <img media src="http://fakeimg.pl/60x60/FEAB09/FFF/?text=IMG" alt="" class="rounded">
             <div body>
               <h2>Media heading</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, recusandae ad explicabo dicta excepturi delectus, dolorem provident. Qui officia dolores, voluptatibus, facere doloremque, cum molestias quas ex repudiandae atque aliquid?</p>
             </div>
-          </media-object>
+          </div>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <media-object center>
+          <div is="media-object" center>
             <paper-avatar media class="avatar-60" placeholder="Name Last"></paper-avatar>
             <div body>
               <h2>Name Last</h2>
               <div>name.lastname@domain.com</div>
               <div>+34 666 666 666</div>
             </div>
-          </media-object>
+          </div>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <media-object vertical>
+          <div is="media-object" vertical>
             <img media src="http://fakeimg.pl/100x100/99CE00/FFF/?text=IMG" alt="">
             <div body>
               <h2>Media heading</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro enim vel in doloribus molestiae quaerat ducimus deserunt alias repellat iste facilis, sapiente, cumque maiores, aliquid velit vero quam corporis sint?</p>
             </div>
-          </media-object>
+          </div>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <media-object vertical reverse>
+          <div is="media-object" vertical reverse>
             <img media src="http://fakeimg.pl/100x100/FEAB09/FFF/?text=IMG" alt="">
             <div body>
               <h2>Media heading</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro enim vel in doloribus molestiae quaerat ducimus deserunt alias repellat iste facilis, sapiente, cumque maiores, aliquid velit vero quam corporis sint?</p>
             </div>
-          </media-object>
+          </div>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <media-object vertical center text-center>
+          <div is="media-object" vertical center text-center>
             <paper-avatar media class="avatar-80" placeholder="Juan Nadie"></paper-avatar>
             <div body>
               <h2>Juan Nadie</h2>
               <div>juan.nadie@domain.com</div>
               <div>+34 666 666 666</div>
             </div>
-          </media-object>
+          </div>
         </template>
       </demo-snippet>
 
